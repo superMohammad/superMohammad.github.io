@@ -130,9 +130,9 @@
         <li class="work__item reveal">
           <button type="button" class="work__link" data-project="pj-mlguard" aria-label="mlguard-lint — open project details">
             <span class="work__index">03</span>
-            <span class="work__media frame frame--thumb frame--code">
+            <span class="work__media frame frame--thumb">
               <span class="frame__glyph" aria-hidden="true">λ</span>
-              <span class="frame__code" data-i18n="w3.frame">A command-line tool — nothing to show</span>
+              <img src="assets/work/mlguard-thumb.webp" alt="" loading="lazy" decoding="async" width="480" height="300">
             </span>
             <span class="work__body">
               <span class="work__name" data-i18n="w3.name">mlguard-lint</span>
@@ -347,21 +347,10 @@
       <h2 class="pj__title" id="pj-mlguard-t" data-i18n="w3.name">mlguard-lint</h2>
       <p class="pj__tags"><span>2026</span><span>Static analysis</span><span>Python</span></p>
       <div class="pj__body"><p data-i18n="p3.about">Machine-learning code can fail quietly: it runs without error and gives you a result better than the truth. This tool reads the code and points out where that has happened, and why it matters. It catches 21 mistakes of this kind.</p></div>
-      <pre class="pj__term">$ mlguard-lint notebook.ipynb
-
-MLG001  high    cell 3
-  StandardScaler.fit() called before train_test_split
-  → the scaler sees test rows; your score is optimistic
-
-MLG007  high    cell 5
-  SMOTE applied before the split
-  → synthetic rows leak across the boundary
-
-MLG011  medium  cell 9
-  grid.best_score_ reported as test performance
-  → that is a cross-validation score, not held-out
-
-3 issues found (2 high, 1 medium)</pre>
+      <div class="pj__gallery">
+        <img src="assets/work/mlguard-1.webp" alt="mlguard-lint flagging seven methodology problems in a training script" loading="lazy" decoding="async" width="1162" height="448">
+        <img src="assets/work/mlguard-2.webp" alt="The --explain view showing why each finding matters and how to fix it" loading="lazy" decoding="async" width="1162" height="599">
+      </div>
       <p class="pj__links">
         <a class="btn btn--ghost" href="https://github.com/superMohammad/mlguard-lint" target="_blank" rel="noopener">
           <span data-i18n="pj.github">View on GitHub</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>

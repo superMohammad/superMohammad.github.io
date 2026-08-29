@@ -1,0 +1,18 @@
+# Licensed font family archive — source download, not for redistribution
+Thmanyah-Font-Family.zip
+
+# Vendored tooling and specs — aids, not part of the site
+.agents/
+improve/
+plans/
+skills-lock.json
+
+# Local working notes
+CLAUDE.md
+
+# Unreferenced local copy — the site links the live verifier instead
+assets/kanz-ai-hackathon.pdf
+
+# OS cruft
+.DS_Store
+Thumbs.db

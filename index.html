@@ -161,6 +161,10 @@
 
       <h3 class="work__subhead reveal" data-i18n="work.all">All projects</h3>
       <ul class="allwork" role="list">
+        <li><button class="allwork__card" type="button" data-project="pj-enhanced-irra">
+          <span class="allwork__name" data-i18n="w7.name">Enhanced IRRA</span>
+          <span class="allwork__desc" data-i18n="w7.short">Finding people in photos from a written description.</span>
+        </button></li>
         <li><button class="allwork__card" type="button" data-project="pj-meimar">
           <span class="allwork__name" data-i18n="w1.name">Meimar</span>
           <span class="allwork__desc" data-i18n="w1.short">Whether a property's asking price is fair.</span>
@@ -190,7 +194,7 @@
       <p class="work__more reveal">
         <a class="work__more-link" href="https://github.com/superMohammad" target="_blank" rel="me noopener">
           <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
-          <span data-i18n="work.more">All six repositories on GitHub</span>
+          <span data-i18n="work.more">All seven repositories on GitHub</span>
         </a>
       </p>
     </section>
@@ -291,13 +295,34 @@
     <section class="contact wrap" id="contact" aria-labelledby="contact-title">
       <p class="contact__eyebrow reveal" data-i18n="contact.eyebrow">Contact</p>
       <h2 class="contact__title reveal" id="contact-title" data-i18n-html="contact.title">Let’s build<br>something intelligent.</h2>
-      <a class="contact__email reveal" href="mailto:Medoalmalki128@gmail.com">
-        Medoalmalki128@gmail.com
+      <a class="contact__email reveal" href="mailto:mohammadalmalke@outlook.com">
+        <span>mohammadalmalke@<wbr>outlook.com</span>
         <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
       </a>
     </section>
 
     <!-- PROJECT DETAIL DIALOGS — static markup only; <dialog> renders in the top layer -->
+    <dialog class="pj" id="pj-enhanced-irra" aria-labelledby="pj-enhanced-irra-t">
+      <button class="pj__close icon-btn" type="button" aria-label="Close project details">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+      <h2 class="pj__title" id="pj-enhanced-irra-t" data-i18n="w7.name">Enhanced IRRA</h2>
+      <p class="pj__tags"><span>2026</span><span>CLIP · PyTorch</span><span>RSTPReid</span></p>
+      <div class="pj__body">
+        <p data-i18n="p7.about">A research project that finds people in a photo gallery from a written description of their clothes and appearance. It fine-tunes CLIP with IRRA-style learning, phrase masking and frequency-weighted word prediction. The public repository includes an illustrated notebook, model code and recorded retrieval results.</p>
+        <p data-i18n="p7.results">On the RSTPReid validation set, the correct dataset identity ranked first for 43.15% of queries and appeared in the top five for 61.15%, with 36.04% mAP. These are preliminary validation results; a matched full-data baseline and final held-out test evaluation remain outstanding. Appearance matching does not verify a person's real-world identity.</p>
+      </div>
+      <div class="pj__gallery">
+        <img src="assets/work/enhanced-irra-1.png" alt="Recorded retrieval results for a description of a pink coat, black leggings and a yellow bicycle" loading="lazy" decoding="async" width="1480" height="1221">
+        <img src="assets/work/enhanced-irra-architecture.svg" alt="How Enhanced IRRA learns from photos and descriptions, then ranks gallery images at search time" loading="lazy" decoding="async" width="1510" height="849">
+      </div>
+      <p class="pj__links">
+        <a class="btn btn--ghost" href="https://github.com/superMohammad/enhanced-irra-rstpreid" target="_blank" rel="noopener">
+          <span data-i18n="pj.github">View on GitHub</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </p>
+    </dialog>
+
     <dialog class="pj" id="pj-meimar" aria-labelledby="pj-meimar-t">
       <button class="pj__close icon-btn" type="button" aria-label="Close project details">
         <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
@@ -427,7 +452,7 @@
       <a class="icon-btn" href="https://github.com/superMohammad" aria-label="GitHub" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a>
       <a class="icon-btn" href="https://www.linkedin.com/in/mohammad-almalke-baa7a4345/" aria-label="LinkedIn" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
       <a class="icon-btn" href="https://x.com/955_599" aria-label="X" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a>
-      <a class="icon-btn" href="mailto:Medoalmalki128@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a>
+      <a class="icon-btn" href="mailto:mohammadalmalke@outlook.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a>
     </div>
     <p class="footer__meta">
       © <span id="year">2026</span> <span data-i18n="footer.name">Mohammad Almalke</span> · <span data-i18n="footer.type">Typeset in</span> <a href="fonts/LICENSE.pdf" data-i18n="footer.font">Thmanyah</a>

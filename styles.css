@@ -368,10 +368,12 @@ svg.frame__glyph { width: clamp(2.4rem, 5vw, 3.5rem); height: auto; }
 }
 .contact__email {
   display: inline-flex; align-items: center; gap: .6rem;
+  max-width: 100%;
   font-family: var(--serif-text); font-size: clamp(1.1rem, 3vw, 1.75rem);
   padding-bottom: .3rem; border-bottom: 1px solid var(--border);
   transition: border-color .25s var(--ease), color .25s var(--ease);
 }
+.contact__email span { min-width: 0; overflow-wrap: anywhere; }
 .contact__email .icon { transition: transform .25s var(--ease); }
 .contact__email:hover { border-color: var(--fg); }
 .contact__email:hover .icon { transform: translate(3px, -3px); }

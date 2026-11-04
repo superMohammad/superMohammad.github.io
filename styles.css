@@ -356,6 +356,7 @@ svg.frame__glyph { width: clamp(2.4rem, 5vw, 3.5rem); height: auto; }
 .edu { margin-top: .5rem; }
 .edu__degree { color: var(--fg); font-weight: 500; }
 .edu__meta { font-size: .95rem; color: var(--faint); margin-top: .2rem; }
+.edu__meta + .edu__degree { margin-top: 1rem; }
 
 /* ============================================================
    Contact

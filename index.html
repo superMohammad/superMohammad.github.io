@@ -98,17 +98,17 @@
 
       <ol class="work" role="list">
         <li class="work__item reveal">
-          <button type="button" class="work__link" data-project="pj-enhanced-irra" aria-label="Enhanced IRRA — open project details">
+          <button type="button" class="work__link" data-project="pj-person-finder" aria-label="Person Finder — open project details">
             <span class="work__index">01</span>
             <span class="work__media frame frame--thumb">
               <span class="frame__glyph" aria-hidden="true">φ</span>
-              <img src="assets/work/enhanced-irra-1.png" alt="" loading="lazy" decoding="async" width="1480" height="1221">
+              <img src="assets/work/person-finder-thumb.webp" alt="" loading="lazy" decoding="async" width="480" height="348">
             </span>
             <span class="work__body">
-              <span class="work__name" data-i18n="w7.name">Enhanced IRRA</span>
-              <span class="work__desc" data-i18n="w7.desc">Finds people in a photo gallery from a written description of their clothes and appearance.</span>
+              <span class="work__name" data-i18n="w7.name">Person Finder</span>
+              <span class="work__desc" data-i18n="w7.desc">Type one sentence and it finds the person, in a photo gallery or live in a crowd.</span>
             </span>
-            <span class="work__tags"><span>2026</span><span>CLIP · PyTorch</span><span>RSTPReid</span></span>
+            <span class="work__tags"><span>2026</span><span>EmbeddingGemma</span><span>YOLO · ByteTrack</span></span>
             <svg class="work__arrow icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </button>
         </li>
@@ -176,9 +176,9 @@
 
       <h3 class="work__subhead reveal" data-i18n="work.all">All projects</h3>
       <ul class="allwork" role="list">
-        <li><button class="allwork__card" type="button" data-project="pj-enhanced-irra">
-          <span class="allwork__name" data-i18n="w7.name">Enhanced IRRA</span>
-          <span class="allwork__desc" data-i18n="w7.short">Finding people in photos from a written description.</span>
+        <li><button class="allwork__card" type="button" data-project="pj-person-finder">
+          <span class="allwork__name" data-i18n="w7.name">Person Finder</span>
+          <span class="allwork__desc" data-i18n="w7.short">Finding a person in photos or live video from one sentence.</span>
         </button></li>
         <li><button class="allwork__card" type="button" data-project="pj-meimar">
           <span class="allwork__name" data-i18n="w1.name">Meimar</span>
@@ -319,22 +319,23 @@
     </section>
 
     <!-- PROJECT DETAIL DIALOGS — static markup only; <dialog> renders in the top layer -->
-    <dialog class="pj" id="pj-enhanced-irra" aria-labelledby="pj-enhanced-irra-t">
+    <dialog class="pj" id="pj-person-finder" aria-labelledby="pj-person-finder-t">
       <button class="pj__close icon-btn" type="button" aria-label="Close project details">
         <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
       </button>
-      <h2 class="pj__title" id="pj-enhanced-irra-t" data-i18n="w7.name">Enhanced IRRA</h2>
-      <p class="pj__tags"><span>2026</span><span>CLIP · PyTorch</span><span>RSTPReid</span></p>
+      <h2 class="pj__title" id="pj-person-finder-t" data-i18n="w7.name">Person Finder</h2>
+      <p class="pj__tags"><span>2026</span><span>EmbeddingGemma</span><span>YOLO · ByteTrack</span></p>
       <div class="pj__body">
-        <p data-i18n="p7.about">A research project that finds people in a photo gallery from a written description of their clothes and appearance. It fine-tunes CLIP with IRRA-style learning, phrase masking and frequency-weighted word prediction. The public repository includes an illustrated notebook, model code and recorded retrieval results.</p>
-        <p data-i18n="p7.results">On the RSTPReid validation set, the correct dataset identity ranked first for 43.15% of queries and appeared in the top five for 61.15%, with 36.04% mAP. These are preliminary validation results; a matched full-data baseline and final held-out test evaluation remain outstanding. Appearance matching does not verify a person's real-world identity.</p>
+        <p data-i18n="p7.about">Type one sentence describing someone's clothes and appearance, and it finds them — in a gallery of person photos, or live in crowd video. One embedding model, EmbeddingGemma-2, reads both words and photos into the same space; I fine-tuned it contrastively on 37,010 sentence–photo pairs. In video, YOLO26 finds people, ByteTrack follows them, and the best match gets a box, at about 26 frames per second on one GPU.</p>
+        <p data-i18n="p7.results">On 200 people the model never saw in training, fine-tuning lifted first-guess accuracy from 40.1% to 71.4%, with the right person in the top ten 93.2% of the time — ahead of published methods such as APTM, RDE and IRRA on the same RSTPReid test split. It was also stress-tested on real mall footage with up to 53 people in a frame. This is research code on public datasets; searching real footage needs consent and a human who checks every match.</p>
       </div>
       <div class="pj__gallery">
-        <img src="assets/work/enhanced-irra-1.png" alt="Recorded retrieval results for a description of a pink coat, black leggings and a yellow bicycle" loading="lazy" decoding="async" width="1480" height="1221">
-        <img src="assets/work/enhanced-irra-architecture.svg" alt="How Enhanced IRRA learns from photos and descriptions, then ranks gallery images at search time" loading="lazy" decoding="async" width="1510" height="849">
+        <img src="assets/work/person-finder-1.webp" alt="Four mall frames, each boxing the shopper that matches a typed description, such as a man in a red and white striped shirt" loading="lazy" decoding="async" width="1600" height="822">
+        <img src="assets/work/person-finder-2.webp" alt="Top five photos for three descriptions before and after fine-tuning, with correct matches outlined in green" loading="lazy" decoding="async" width="1600" height="880">
+        <img src="assets/work/person-finder-3.webp" alt="Method figure: contrastive training of EmbeddingGemma-2, then detection, tracking and text matching in live video" loading="lazy" decoding="async" width="1600" height="928">
       </div>
       <p class="pj__links">
-        <a class="btn btn--ghost" href="https://github.com/superMohammad/enhanced-irra-rstpreid" target="_blank" rel="noopener">
+        <a class="btn btn--ghost" href="https://github.com/superMohammad/person-finder-embeddinggemma" target="_blank" rel="noopener">
           <span data-i18n="pj.github">View on GitHub</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
         </a>
       </p>
